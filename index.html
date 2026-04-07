@@ -53,7 +53,7 @@
       border-radius: 20px;
       display: block;
       margin: 0 auto;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
@@ -112,6 +112,34 @@
       color: var(--muted);
     }
 
+    .pillars {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pillar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .pillar h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .pillar p {
+      font-size: 16px;
+      margin: 0;
+      color: #1b1f24;
+    }
+
     @media (max-width: 860px) {
       .hero {
         grid-template-columns: 1fr;
@@ -130,6 +158,10 @@
       p {
         font-size: 17px;
       }
+
+      .pillars {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -137,13 +169,11 @@
 <body>
   <div class="wrap">
     <section class="hero">
-
       <div class="photo">
-        <img src="/assets/sergey-photo.png" alt="Dr Sergey Kyunttsel" />
+        <img src="/assets/sergey-photo.PNG" alt="Dr Sergey Kyunttsel" />
       </div>
 
       <div class="content">
-
         <h1>Dr Sergey Kyunttsel</h1>
         <div class="subname">PhD in Economics</div>
 
@@ -184,37 +214,31 @@
         <div class="note">
           Brief introductory call. No preparation needed.
         </div>
-
       </div>
-
     </section>
 
-    
-<section style="margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+    <section class="pillars">
+      <div class="pillar">
+        <h3>Structure</h3>
+        <p>
+          Organizing income, assets, and decisions into a clear, coordinated framework.
+        </p>
+      </div>
 
-  <div style="background:#fff; border:1px solid #e7ebf0; border-radius:16px; padding:20px;">
-    <h3>Structure</h3>
-    <p style="font-size:16px;">
-      Organizing income, assets, and decisions into a clear, coordinated framework.
-    </p>
-  </div>
+      <div class="pillar">
+        <h3>Tax Efficiency</h3>
+        <p>
+          Identifying inefficiencies and aligning financial decisions to reduce unnecessary tax drag.
+        </p>
+      </div>
 
-  <div style="background:#fff; border:1px solid #e7ebf0; border-radius:16px; padding:20px;">
-    <h3>Tax Efficiency</h3>
-    <p style="font-size:16px;">
-      Identifying inefficiencies and aligning financial decisions to reduce unnecessary tax drag.
-    </p>
-  </div>
-
-  <div style="background:#fff; border:1px solid #e7ebf0; border-radius:16px; padding:20px;">
-    <h3>Long-Term Planning</h3>
-    <p style="font-size:16px;">
-      Connecting today’s decisions with long-term outcomes, including retirement readiness.
-    </p>
-  </div>
-
-</section>
-
+      <div class="pillar">
+        <h3>Long-Term Planning</h3>
+        <p>
+          Connecting today’s decisions with long-term outcomes, including retirement readiness.
+        </p>
+      </div>
+    </section>
   </div>
 </body>
 </html>
