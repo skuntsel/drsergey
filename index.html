@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Favicon / app icons -->
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#28384d">
+  <!-- Favicon / app icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#28384d">
 
-<!-- Basic identity metadata -->
-<title>Sergey Kyunttsel, PhD | Financial Professional Profile</title>
-<meta name="description" content="Financial professional profile for Sergey Kyunttsel, PhD, focused on long-term decision-making, financial structure, and coordinated protection and retirement considerations.">
+  <!-- Basic identity metadata -->
+  <title>Dr Sergey | Financial Structure and Decision-Making</title>
+  <meta
+    name="description"
+    content="Dr Sergey: a professional profile focused on financial structure, capital allocation, decision coordination, and long-term value."
+  >
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://drsergey.com/">
-<meta property="og:site_name" content="Sergey Kyunttsel, PhD">
-<meta property="og:title" content="Sergey Kyunttsel, PhD | Financial Professional Profile">
-<meta property="og:description" content="Financial professional profile for Sergey Kyunttsel, PhD, focused on long-term decision-making, financial structure, and coordinated protection and retirement considerations.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drsergey.com/">
+  <meta property="og:site_name" content="Dr Sergey">
+  <meta property="og:title" content="Dr Sergey | Financial Structure and Decision-Making">
+  <meta
+    property="og:description"
+    content="A professional profile focused on financial structure, capital allocation, decision coordination, and long-term value."
+  >
 
-<!-- Search/site-name signal -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://drsergey.com/",
-  "name": "Sergey Kyunttsel, PhD",
-  "alternateName": "Dr Sergey"
-}
-</script>
+  <!-- Search/site-name signal -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://drsergey.com/",
+    "name": "Dr Sergey",
+    "alternateName": "Sergey Kyunttsel, PhD"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sergey Kyunttsel",
+    "honorificSuffix": "PhD",
+    "url": "https://drsergey.com/",
+    "sameAs": [
+      "https://sergeykyunttsel.com/",
+      "https://www.linkedin.com/in/sergeykyunttsel",
+      "https://orcid.org/0009-0005-0190-5826"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -42,6 +63,7 @@
       --muted: #5b6470;
       --border: #e7ebf0;
       --accent: #111111;
+      --soft: #f9fafb;
     }
 
     * {
@@ -56,10 +78,14 @@
       line-height: 1.65;
     }
 
+    a {
+      color: inherit;
+    }
+
     .wrap {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 40px 20px 120px;
+      padding: 40px 20px 100px;
     }
 
     .hero {
@@ -122,10 +148,10 @@
       margin-top: 24px;
       padding: 16px 20px;
       border-left: 3px solid #111;
-      background: #f9fafb;
+      background: var(--soft);
       border-radius: 8px;
       text-align: left;
-      max-width: 700px;
+      max-width: 720px;
     }
 
     .authority p {
@@ -133,17 +159,16 @@
       font-size: 16px;
     }
 
-    .pre-cta {
-      font-size: 16px;
-      color: var(--muted);
-      margin-top: 6px;
-      margin-bottom: 0;
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 14px;
-      padding: 14px 22px;
+      padding: 13px 20px;
       background: var(--accent);
       color: #ffffff;
       text-decoration: none;
@@ -153,12 +178,18 @@
       transition: opacity 0.2s ease;
     }
 
+    .button.secondary {
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
     .button:hover {
-      opacity: 0.92;
+      opacity: 0.88;
     }
 
     .note {
-      margin-top: 14px;
+      margin-top: 16px;
       font-size: 15px;
       color: var(--muted);
     }
@@ -216,8 +247,12 @@
     }
 
     .contact a {
-      color: var(--text);
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 860px) {
@@ -245,6 +280,10 @@
         margin-right: auto;
       }
 
+      .button-row {
+        justify-content: center;
+      }
+
       .pillars {
         grid-template-columns: 1fr;
       }
@@ -261,126 +300,153 @@
   <div class="wrap">
     <section class="hero">
       <div class="photo">
-        <img src="/assets/sergey-photo.png" alt="Sergey Kyunttsel, PhD" />
+        <img src="/assets/sergey-photo.png" alt="Sergey Kyunttsel, PhD">
       </div>
 
       <div class="content">
         <h1>Sergey Kyunttsel, PhD</h1>
-        <div class="subname">Financial Professional<br />New York Life Insurance Company</div>
+
+        <div class="subname">
+          Dr Sergey<br>
+          Financial Structure and Decision-Making
+        </div>
 
         <h2>
-          Financial Structure & Coordination
+          Coordination across capital, risk, liquidity, and long-term value
         </h2>
 
         <p class="hook">
-          Financial decisions are often made in isolation. Over time, that can create gaps between different parts of an overall strategy.
+          Financial decisions are often made one at a time. Their real consequences emerge from how they interact over time.
         </p>
 
         <p>
-          Many people are doing important things — earning, saving, investing, and planning —
-          but the different pieces do not always work together in a coordinated way.
+          Earning, saving, investing, financing, protecting liquidity, and planning for future
+          obligations are not separate problems. Each decision changes the conditions under which
+          the others must work.
         </p>
 
         <p>
-          A more structured approach may help bring greater clarity across income protection,
-          liquidity, tax awareness, and long-term planning.
+          A structured approach asks whether individual choices reinforce one another, whether
+          capital remains available when needed, and whether the original economic purpose of a
+          decision survives implementation.
         </p>
 
         <p>
-          The focus is on helping individuals review their current approach at a high level
-          and determine whether a more detailed review may be helpful.
+          This site presents a concise perspective on financial structure, coordinated
+          decision-making, capital allocation, and the preservation of long-term value.
         </p>
 
         <div class="authority">
           <p>
-            Background includes PhD-level training in economics and professional experience in financial analysis and structured decision-making.
+            Background includes a PhD in Economics and more than 15 years of experience across
+            corporate finance, FP&amp;A, capital allocation, financial modeling, investment analysis,
+            business ownership, and structured decision support.
           </p>
         </div>
 
-        <p class="pre-cta">
-          If helpful, you may schedule an initial consultation to discuss your current approach.
-        </p>
+        <div class="button-row">
+          <a class="button" href="https://sergeykyunttsel.com/">
+            Full Professional Profile
+          </a>
 
-        <a class="button" href="https://calendly.com/sergeykyunttsel/initial-consultation">
-          Schedule an Initial Consultation
-        </a>
+          <a
+            class="button secondary"
+            href="https://www.linkedin.com/in/sergeykyunttsel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
 
         <div class="note">
-          This meeting is intended for general informational purposes only and does not constitute financial, tax, or legal advice.
+          Independent professional profile. No employer or financial institution affiliation is represented.
         </div>
       </div>
     </section>
 
     <section class="pillars">
       <div class="pillar">
-        <h3>Tax Coordination</h3>
+        <h3>Capital Allocation</h3>
         <p>
-          Are decisions made with awareness of how they may interact across accounts and income sources?
+          Are limited resources directed toward alternatives capable of producing durable,
+          measurable value?
         </p>
       </div>
 
       <div class="pillar">
-        <h3>Income Protection</h3>
+        <h3>Liquidity and Resilience</h3>
         <p>
-          If income stopped, how long would current resources sustain needs?
-        </p>
-      </div>
-
-      <div class="pillar">
-        <h3>Liquidity</h3>
-        <p>
-          Are funds accessible when needed, or tied up long-term?
+          Does the financial structure preserve sufficient flexibility for obligations,
+          uncertainty, and changing circumstances?
         </p>
       </div>
 
       <div class="pillar">
         <h3>Decision Alignment</h3>
         <p>
-          Do financial decisions reinforce each other, or exist in isolation?
+          Do individual financial decisions reinforce one another, or create avoidable conflicts
+          across time?
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Risk Awareness</h3>
+        <p>
+          Which assumptions, dependencies, and implementation conditions could prevent the intended
+          result from being achieved?
         </p>
       </div>
 
       <div class="pillar">
         <h3>Long-Term Strategy</h3>
         <p>
-          How do today’s decisions relate to longer-term goals and future needs?
+          How do present decisions affect future capacity, optionality, obligations, and financial
+          independence?
         </p>
       </div>
 
       <div class="pillar">
-        <h3>Why This Matters</h3>
+        <h3>Realized Value</h3>
         <p>
-          Challenges often arise not from one decision, but from how multiple elements interact over time.
+          Did the decision produce the result originally approved, or did value erode between
+          planning and execution?
         </p>
       </div>
     </section>
 
-<section class="contact">
-  <h3>Contact Information</h3>
+    <section class="contact">
+      <h3>Contact</h3>
 
-  <p><strong>Sergey Kyunttsel, PhD</strong></p>
-  <p>Financial Professional</p>
-  <p>New York Life Insurance Company</p>
+      <p><strong>Sergey Kyunttsel, PhD</strong></p>
 
-  <p>Greater New York General Office<br>
-  420 Lexington Avenue, 14th & 15th Floor<br>
-  New York, NY 10170</p>
+      <p>
+        Professional, research, publication, and collaboration inquiries:
+      </p>
 
-  <p>
-    Email: <a href="mailto:skyunttsel@ft.newyorklife.com">skyunttsel@ft.newyorklife.com</a>
-  </p>
-</section>
+      <p>
+        <a href="mailto:contact@sergeykyunttsel.com">
+          contact@sergeykyunttsel.com
+        </a>
+      </p>
+    </section>
 
     <section class="disclosures">
       <h3>Important Information</h3>
+
       <p>
-        I offer a variety of products that can help meet insurance and financial needs, including college funding, retirement, extended care planning, and lifetime income strategies.
+        This website is a general professional and educational profile. It does not offer or
+        solicit investment-advisory, brokerage, insurance, legal, tax, or accounting services.
       </p>
+
       <p>
-        New York Life Insurance Company and its agents do not provide tax, legal, or accounting advice. Please consult your own professionals.
+        Nothing on this website should be treated as individualized financial, investment, legal,
+        tax, or accounting advice.
       </p>
+
       <p>
-        Not licensed in all jurisdictions.
+        Please do not submit confidential financial, account, legal, tax, medical, or other
+        sensitive personal information through a general inquiry.
       </p>
     </section>
   </div>
